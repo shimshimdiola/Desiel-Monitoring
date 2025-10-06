@@ -13,17 +13,11 @@
   <link href="assets/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
   <!-- icons -->
   <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
-
-  <!-- <link href="assets/plugins/fullcalendar/vanilla-calendar.min.css" rel="stylesheet" type="text/css"> -->
-  <!-- <link href="assets/plugins/c3/c3.min.css" rel="stylesheet" type="text/css"> -->
-  <!-- <link href="assets/plugins/chartist/css/chartist.min.css" rel="stylesheet" type="text/css"> -->
-  <!-- <link href="assets/plugins/morris/morris.css" rel="stylesheet" type="text/css"> -->
-  <!-- <link href="assets/plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css"> -->
-  <!-- <link href="assets/plugins/animate/animate.css" rel="stylesheet" type="text/css"> -->
-  <!-- <link href="assets/plugins/rwd-table-patterns/rwd-table.min.css" rel="stylesheet" type="text/css"> -->
-  <!-- <link href="assets/plugins/alertify/css/alertify.css" rel="stylesheet" type="text/css"> -->
-  <!-- <link href="assets/plugins/alertify/css/themes/default.css" rel="stylesheet" type="text/css"> -->
-
+  <!-- DataTables -->
+  <link href="assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+  <!-- Responsive datatable examples -->
+  <link href="assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
   <!-- App css-->
   <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 

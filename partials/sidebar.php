@@ -28,9 +28,15 @@
                 <li><a href="page.php?p=dashboard" class="waves-effect"><i class="dripicons-device-desktop"></i>
                         <span>Dashboard <span
                                 class="badge badge-pill badge-primary float-right">7</span></span></a></li>
-                <li><a href="page.php?p=contact" class="waves-effect"><i class="dripicons-to-do"></i><span>
-                            Contact</span></a></li>
-                <li class="menu-title">Components</li>
+                <li><a href="page.php?p=purchase order" class="waves-effect"><i class="ion-card"></i><span>
+                            Purchase Order</span></a></li>
+                <li><a href="page.php?p=masterlist" class="waves-effect"><i class="ion-ios7-paper"></i><span>
+                            Masterlist</span></a></li>
+                <li><a href="page.php?p=report" class="waves-effect"><i class="ion-pie-graph"></i><span>
+                            Report</span></a></li>
+                <li><a href="page.php?p=setting" class="waves-effect"><i class="mdi mdi-settings"></i><span>
+                            Setting</span></a></li>
+                <!-- <li class="menu-title">Components</li>
                 <li class="has_sub"><a href="javascript:void(0);" class="waves-effect"><i
                             class="dripicons-jewel"></i> <span>UI Elements </span><span class="float-right"><i
                                 class="mdi mdi-chevron-right"></i></span></a>
@@ -39,7 +45,7 @@
                         <li><a href="javascript:void(0);">Alertify</a></li>
                         <li><a href="javascript:void(0);">Badge</a></li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
         </div>
         <div class="clearfix"></div>

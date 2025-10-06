@@ -36,11 +36,20 @@ $file = __DIR__ . "/pages/$page/index.php"; ?>
                     <!-- end page title end breadcrumb -->
                     <!-- Page content here!! -->
                     <?php
-                    if (preg_match('/^[a-zA-Z0-9_-]+$/', $page) && file_exists($file)) {
+                    // if (preg_match('/^[a-zA-Z0-9_-]+$/', $page) && file_exists($file)) {
+                    //     include $file;
+                    // } else {
+                    //     include __DIR__ . '/pages/404.html';
+                    // }
+
+
+
+                    if (preg_match('/^[a-zA-Z0-9 _-]+$/', $page) && file_exists($file)) {
                         include $file;
                     } else {
                         include __DIR__ . '/pages/404.html';
                     }
+                    
                     ?>
                 </div><!-- container -->
             </div>
