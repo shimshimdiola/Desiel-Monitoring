@@ -38,8 +38,6 @@
   <!-- Parsley js -->
   <script src="assets/plugins/parsleyjs/parsley.min.js"></script>
   <script src="assets/pages/validation.init.js"></script>
-  <!-- Main Js -->
-  <script src="assets/js/main.js"></script>
   <!-- App js -->
   <script src="assets/js/app.js"></script>
 

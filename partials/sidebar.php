@@ -15,9 +15,9 @@
         <ul class="list-unstyled list-inline mb-0 mt-2">
             <li class="list-inline-item"><a href="#" class="" data-toggle="tooltip" data-placement="top"
                     title="Profile"><i class="dripicons-user text-purple"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="" data-toggle="tooltip" data-placement="top"
+            <li class="list-inline-item"><a href="page.php?p=setting" class="" data-toggle="tooltip" data-placement="top"
                     title="Settings"><i class="dripicons-gear text-dark"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="" data-toggle="tooltip" data-placement="top"
+            <li class="list-inline-item"><a href=" <?php echo BASE_URL . 'pages/logout.php' ?>" class="" data-toggle="tooltip" data-placement="top"
                     title="Log out"><i class="dripicons-power text-danger"></i></a></li>
         </ul>
     </div>
