@@ -65,14 +65,6 @@
         <!-- /.modal-dialog -->
       </div>
       <!-- /.modal -->
-
-
-
-
-
-
-
-
     <div class="card">
       <div class="card-body table-responsive">
         <div class>

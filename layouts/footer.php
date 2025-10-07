@@ -32,8 +32,18 @@
   <!-- Sweet-Alert  -->
   <script src="assets/plugins/sweet-alert2/sweetalert2.min.js"></script>
   <script src="assets/pages/sweet-alert.init.js"></script>
+  <!-- Dropify js -->
+  <script src="assets/plugins/dropify/js/dropify.min.js"></script>
+  <script src="assets/pages/dropify.init.js"></script>
+  <!-- Parsley js -->
+  <script src="assets/plugins/parsleyjs/parsley.min.js"></script>
+  <script src="assets/pages/validation.init.js"></script>
+  <!-- Main Js -->
+  <script src="assets/js/main.js"></script>
   <!-- App js -->
   <script src="assets/js/app.js"></script>
+
+
   </body>
 
   </html>

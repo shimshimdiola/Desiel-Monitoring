@@ -30,10 +30,8 @@
                                 class="badge badge-pill badge-primary float-right">7</span></span></a></li>
                 <li><a href="page.php?p=purchase order" class="waves-effect"><i class="ion-card"></i><span>
                             Purchase Order</span></a></li>
-                <li><a href="page.php?p=masterlist" class="waves-effect"><i class="ion-ios7-paper"></i><span>
-                            Masterlist</span></a></li>
-                <li><a href="page.php?p=report" class="waves-effect"><i class="ion-pie-graph"></i><span>
-                            Report</span></a></li>
+                <li><a href="page.php?p=masterlist and report" class="waves-effect"><i class="ion-ios7-paper"></i><span>
+                            Masterlist and Report</span></a></li>
                 <li><a href="page.php?p=setting" class="waves-effect"><i class="mdi mdi-settings"></i><span>
                             Setting</span></a></li>
                 <!-- <li class="menu-title">Components</li>
