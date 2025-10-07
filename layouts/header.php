@@ -22,9 +22,8 @@
   <link href="assets/plugins/dropify/css/dropify.min.css" rel="stylesheet" />
   <!-- App css-->
   <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-
+  <!-- Chart.js (Zoogler Compatible) -->
 </head>
-
 <body class="fixed-left">
   <div id="preloader">
     <div id="status">
