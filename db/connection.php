@@ -2,9 +2,9 @@
 include_once __DIR__ . '/../config/config.php';
 // echo SITE_NAME;
 # this is for testing purpose only. you can change it to your own database details.
-$host = "localhost";
-$user = "root";
-$pass = "";
+$host = DB_HOST;
+$user = DB_USER;
+$pass = DB_PASS;
 $db   = DB_NAME . "_db";
 
 // Suppress PHP warning with @

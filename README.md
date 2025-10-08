@@ -1,8 +1,3 @@
-That's a fantastic idea\! Including visuals will make your `README.md` much more engaging and professional.
-
-Here is the full, refined `README.md` code, integrating image placeholders where the screenshots and GIFs should go.
-
-
 # 🚛 Diesel Monitoring System
 
 The **Diesel Monitoring System** is a responsive, web-based management tool designed to track and manage diesel fuel usage for transport vehicles. It provides fleet managers with transparent reports on driver activity, fuel consumption, and operational expenses for efficient fleet operations.
@@ -87,13 +82,13 @@ C:\xampp\htdocs\diesel-monitoring
 Edit the database configuration file at `includes/config.php` to match your local credentials:
 
 ```php
-<?php
-$host = "localhost";
-$user = "root"; // Your MySQL username
-$pass = "";     // Your MySQL password
-$db   = "diesel_db"; // The database name you created
-// ... rest of the code
-?>
+// Site configuration: make sure the name matches your folder name
+define("SITE_NAME", "Desiel");
+// Database name without prefix/suffix
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASS", "");
+define("DB_NAME", "Desiel");
 ```
 
 ### 5️⃣ Run the Project

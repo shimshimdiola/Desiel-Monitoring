@@ -1,5 +1,6 @@
   </div><!-- END wrapper -->
-  <script src="assets/js/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <!-- <script src="assets/js/jquery.min.js"></script> -->
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/modernizr.min.js"></script>
@@ -38,14 +39,10 @@
   <!-- Parsley js -->
   <script src="assets/plugins/parsleyjs/parsley.min.js"></script>
   <script src="assets/pages/validation.init.js"></script>
-
-
-
-
+  <!-- Chart JS -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Your custom script -->
   <script src="assets/js/fuelChart.js"></script>
-
   <!-- App js -->
   <script src="assets/js/app.js"></script>
   </body>

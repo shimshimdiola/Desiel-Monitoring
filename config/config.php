@@ -6,7 +6,11 @@ if (session_status() == PHP_SESSION_NONE) {
 // Site configuration: make sure the name matches your folder name
 define("SITE_NAME", "Desiel");
 // Database name without prefix/suffix
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASS", "");
 define("DB_NAME", "Desiel");
+
 // Base URL of the application
 $host = $_SERVER['HTTP_HOST'];
 // Build base URL dynamically

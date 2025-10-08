@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . '/config/config.php';
 if (isset($_SESSION['user_id'])) {
     // already logged in → go straight to dashboard
@@ -8,6 +7,7 @@ if (isset($_SESSION['user_id'])) {
 }
 require_once __DIR__ . '/db/connection.php';
 require_once __DIR__ . '/include/functions.php'; // make sure this connects $conn
+// Call the function correctly
 include 'layouts/header.php';
 // Api to handle login
 include 'api/login.php';
