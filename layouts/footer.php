@@ -1,6 +1,6 @@
   </div><!-- END wrapper -->
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <!-- <script src="assets/js/jquery.min.js"></script> -->
+  <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/modernizr.min.js"></script>
@@ -44,8 +44,21 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Fuelchart -->
   <script src="assets/js/fuelChart.js"></script>
-  <!-- Dark mood -->
-  <script src="assets/js/darkmode.js"></script>
+  <!-- Form advanced -->
+ <script src="assets/plugins/timepicker/moment.js"></script>
+ <script src="assets/plugins/timepicker/tempusdominus-bootstrap-4.js"></script>
+ <script src="assets/plugins/timepicker/bootstrap-material-datetimepicker.js"></script>
+ <script src="assets/plugins/clockpicker/jquery-clockpicker.min.js"></script>
+ <script src="assets/plugins/colorpicker/jquery-asColor.js"></script>
+ <script src="assets/plugins/colorpicker/jquery-asGradient.js"></script>
+ <script src="assets/plugins/colorpicker/jquery-asColorPicker.min.js"></script>
+ <script src="assets/plugins/select2/select2.min.js"></script>
+ <script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+ <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+ <script src="assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+ <script src="assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+  <!-- Form advance -->
+  <script src="assets/pages/form-advanced.js"></script>
   <!-- App js -->
   <script src="assets/js/app.js"></script>
   </body>

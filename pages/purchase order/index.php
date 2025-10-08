@@ -40,14 +40,82 @@
           <div class="modal-body">
 
 
-
-            <form class="form-horizontal"><label class="col-sm-2 control-label p-0" for="example-input-small">Small</label>
+            <form class="form-horizontal" action="#" method="post">
+              <label class="col-sm-2 control-label p-0" for="example-input-small">Driver</label>
               <div class="form-group row">
-                <div class="col-sm-12"><input type="text" id="example-input-small" name="example-input-small" class="form-control form-control-sm" placeholder=".input-sm"></div>
-               
+                <div class="col-sm-12">
+                  <?php
+                  // Sample list of names
+                  $names = [
+                    "John Doe",
+                    "Jane Smith",
+                    "Alice Johnson",
+                    "Bob Brown",
+                    "Charlie Wilson",
+                    "David Lee",
+                    "Eve White",
+                    "Frank Black",
+                    "Grace Green",
+                    "Hannah Red",
+                    // Add more names as needed
+                  ];
+                  $options = [];
+                  foreach ($names as $name) {
+                    $options[] = ['value' => $name, 'label' => $name];
+                  }
+                  // You can add more options as needed
+                  ?>
+                  <select
+                    class="select2 form-control mb-3 custom-select"
+                    style="width: 100%; height: 36px;" name="driver" required>
+                    <option value="">John Doe</option>
+                    <optgroup label="Drivers">
+                      <?php foreach ($options as $option) { ?>
+                        <option value="<?php echo htmlspecialchars($option['value']); ?>"><?php echo htmlspecialchars($option['label']); ?></option>
+                      <?php } ?>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+              <label class="col-sm-2 control-label p-0" for="example-input-small">Plate #</label>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <!-- plate no. -->
+                  <?php
+                  $options = [];
+                  for ($i = 1; $i <= 20; $i++) {
+                    // Generate random four-digit numbers like "XYZ 1234"
+                    $plateNumber = 'XYZ ' . rand(1000, 9999);
+                    $options[] = ['value' => substr($plateNumber, strpos($plateNumber, ' ') + 1) ?: '', 'label' => $plateNumber];
+                  }
+                  ?>
+                  <select
+                    class="select2 form-control mb-3 custom-select"
+                    style="width: 100%; height: 36px;" name="plates" required>
+                    <option value="">XYZ 1234</option>
+                    <optgroup label="Plates">
+                      <?php foreach ($options as $option) { ?>
+                        <option value="<?php echo htmlspecialchars($option['value']); ?>"><?php echo htmlspecialchars($option['label']); ?></option>
+                      <?php } ?>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+              <label class="col-sm-2 control-label p-0" for="Tracking">Traking</label>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <input type="text" id="Tracking" name="tracking" class="form-control form-control-sm" placeholder="Ncs Delevery" required>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="reset" class="btn btn-secondary" data-dismiss="modal">
+                  Close
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  Proceed
+                </button>
               </div>
             </form>
-
 
 
 

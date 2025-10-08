@@ -20,11 +20,20 @@
   <link href="assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
   <!-- Dropify -->
   <link href="assets/plugins/dropify/css/dropify.min.css" rel="stylesheet" />
-
+  <!-- Form advance  -->
+  <link href="assets/plugins/timepicker/tempusdominus-bootstrap-4.css" rel="stylesheet">
+  <link href="assets/plugins/timepicker/bootstrap-material-datetimepicker.css" rel="stylesheet">
+  <link href="assets/plugins/clockpicker/jquery-clockpicker.min.css" rel="stylesheet">
+  <link href="assets/plugins/colorpicker/asColorPicker.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/plugins/select2/select2.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+  <link href="assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+  <link href="assets/plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
   <!-- App css-->
   <link href="assets/css/style.css" rel="stylesheet" type="text/css">
- 
+
 </head>
+
 <body class="fixed-left">
   <div id="preloader">
     <div id="status">
