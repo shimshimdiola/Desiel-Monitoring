@@ -11,7 +11,7 @@
                            <h5>Welcome</h5>
                        </div>
                        <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
-                       <a class="dropdown-item" href="#"><i class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a>
+                       <a class="dropdown-item" href="page.php?p=setting"><i class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a>
                        <div class="dropdown-divider"></div><a class="dropdown-item" href=" <?php echo BASE_URL . 'pages/logout.php' ?>">
                            <i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
                    </div>

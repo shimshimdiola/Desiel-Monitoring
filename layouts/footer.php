@@ -25,6 +25,7 @@
   <script src="assets/plugins/datatables/buttons.html5.min.js"></script>
   <script src="assets/plugins/datatables/buttons.print.min.js"></script>
   <script src="assets/plugins/datatables/buttons.colVis.min.js"></script>
+
   <!-- Responsive examples -->
   <script src="assets/plugins/datatables/dataTables.responsive.min.js"></script>
   <script src="assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
@@ -41,11 +42,12 @@
   <script src="assets/pages/validation.init.js"></script>
   <!-- Chart JS -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- Your custom script -->
+  <!-- Fuelchart -->
   <script src="assets/js/fuelChart.js"></script>
+  <!-- Dark mood -->
+  <script src="assets/js/darkmode.js"></script>
   <!-- App js -->
   <script src="assets/js/app.js"></script>
   </body>
-  ascs
 
   </html>
