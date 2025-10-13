@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🧠 Ollama Local Chat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    header::before {
+      content: "💬";
+    }
+    #chat {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .user-msg, .bot-msg {
+      max-width: 70%;
+      padding: 10px 15px;
+      border-radius: 10px;
+      word-wrap: break-word;
+      line-height: 1.4;
+    }
+    .user-msg {
+      align-self: flex-end;
+      background-color: #0078ff;
+    }
+    .bot-msg {
+      align-self: flex-start;
+      background-color: #2a2a2a;
+    }
+    .input-area {
+      display: flex;
+      padding: 10px;
+      background-color: #1e1e1e;
+      border-top: 1px solid #333;
+    }
+    #userInput {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2a2a2a;
+      color: white;
+    }
+    button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background-color: #0078ff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #005fd1;
+    }
+  </style>
+</head>
+<body>
+  <header>Ollama Local Chat</header>
+  <div id="chat"></div>
+  <div class="input-area">
+    <input type="text" id="userInput" placeholder="Type your message..." onkeydown="if(event.key==='Enter') sendMessage()">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <script>
+    async function sendMessage() {
+      const input = document.getElementById('userInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      addMessage(text, 'user');
+      input.value = '';
+
+      addMessage('Thinking...', 'bot', true);
+
+      try {
+        const response = await fetch('http://localhost/Desiel/ollama-proxy.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            model: "llama3.2",  // change this if you use another model (e.g., "llama3")
+            prompt: text,
+            stream: false
+          })
+        });
+
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+        const data = await response.json();
+        updateLastBotMessage(data.response || '(no response)');
+      } catch (error) {
+        updateLastBotMessage(`⚠️ Connection error: ${error.message}`);
+      }
+    }
+
+    function addMessage(text, sender, isLoading = false) {
+      const chat = document.getElementById('chat');
+      const message = document.createElement('div');
+      message.className = sender === 'user' ? 'user-msg' : 'bot-msg';
+      message.textContent = text;
+      if (isLoading) message.id = 'loading';
+      chat.appendChild(message);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    function updateLastBotMessage(text) {
+      const loading = document.getElementById('loading');
+      if (loading) {
+        loading.textContent = text;
+        loading.removeAttribute('id');
+      }
+    }
+  </script>
+</body>
+</html>

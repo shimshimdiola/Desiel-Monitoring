@@ -42,23 +42,28 @@
   <script src="assets/pages/validation.init.js"></script>
   <!-- Chart JS -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- Fuelchart -->
-  <script src="assets/js/fuelChart.js"></script>
+
   <!-- Form advanced -->
- <script src="assets/plugins/timepicker/moment.js"></script>
- <script src="assets/plugins/timepicker/tempusdominus-bootstrap-4.js"></script>
- <script src="assets/plugins/timepicker/bootstrap-material-datetimepicker.js"></script>
- <script src="assets/plugins/clockpicker/jquery-clockpicker.min.js"></script>
- <script src="assets/plugins/colorpicker/jquery-asColor.js"></script>
- <script src="assets/plugins/colorpicker/jquery-asGradient.js"></script>
- <script src="assets/plugins/colorpicker/jquery-asColorPicker.min.js"></script>
- <script src="assets/plugins/select2/select2.min.js"></script>
- <script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
- <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
- <script src="assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
- <script src="assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+  <script src="assets/plugins/timepicker/moment.js"></script>
+  <script src="assets/plugins/timepicker/tempusdominus-bootstrap-4.js"></script>
+  <script src="assets/plugins/timepicker/bootstrap-material-datetimepicker.js"></script>
+  <script src="assets/plugins/clockpicker/jquery-clockpicker.min.js"></script>
+  <script src="assets/plugins/colorpicker/jquery-asColor.js"></script>
+  <script src="assets/plugins/colorpicker/jquery-asGradient.js"></script>
+  <script src="assets/plugins/colorpicker/jquery-asColorPicker.min.js"></script>
+  <script src="assets/plugins/select2/select2.min.js"></script>
+  <script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+  <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+  <script src="assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+  <script src="assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
   <!-- Form advance -->
   <script src="assets/pages/form-advanced.js"></script>
+  <!-- HTML5 QR Code Scanner -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <!-- Fuelchart -->
+  <script src="assets/js/fuelChart.js"></script>
+  <!-- QR Code gen -->
+  <script src="assets/js/qr.js"></script>
   <!-- App js -->
   <script src="assets/js/app.js"></script>
   </body>

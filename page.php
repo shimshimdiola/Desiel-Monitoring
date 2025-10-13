@@ -49,7 +49,7 @@ $file = __DIR__ . "/pages/$page/index.php"; ?>
                     } else {
                         include __DIR__ . '/pages/404.html';
                     }
-                    
+
                     ?>
                 </div><!-- container -->
             </div>
