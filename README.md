@@ -1,3 +1,4 @@
+
 # 🚛 Diesel Monitoring System
 
 The **Diesel Monitoring System** is a responsive, web-based management tool designed to track and manage diesel fuel usage for transport vehicles. It provides fleet managers with transparent reports on driver activity, fuel consumption, and operational expenses for efficient fleet operations.
@@ -19,15 +20,16 @@ Get a quick look at the main system dashboard:
 - Summary of total liters consumed and total cost.
 - Real-time transport and fuel data visualization.
 
-### 🔹 Transport Masterlist
+### 🔹 Masterlist and Fuel Logging
 - Record and view all diesel transactions with detailed metrics (tracking number, driver, destination, liters, price, etc.).
+- **New!** Supports logging new transactions quickly via **QR Code scanning** (e.g., of a driver ID or vehicle tag).
 - Supports instant table export to **Excel** (XLSX) for reporting.
+
+![Screenshot of the Masterlist and Reporting view](assets/images/screenshots/masterlist.png)
 
 ### 🔹 File Management
 - Upload and update company logo using **Dropify**.
 - Change admin credentials through the **Update Password** section.
-
-![Screenshot of the Masterlist and Reporting view](assets/images/screenshots/masterlist.png)
 
 ### 🔹 Reports
 - Generate reports for auditing and budget tracking.
@@ -39,6 +41,18 @@ Get a quick look at the main system dashboard:
 
 ---
 
+## ✨ New Feature: QR Code Diesel Logging
+
+To streamline the logging process, the system now supports **QR Code scanning**. This is primarily intended to:
+
+1.  **Quickly identify** the driver or vehicle by scanning a pre-generated QR code (e.g., on an ID badge or vehicle sticker).
+2.  **Pre-fill** the transaction form with the relevant Driver or Vehicle ID, reducing manual data entry and errors at the time of refueling.
+
+The implementation is client-side, using a standard JavaScript library to access the device camera (where available) or to allow manual input based on a QR code lookup.
+
+![Screenshot of the Masterlist and Reporting view](assets/images/screenshots/driver_log.png)
+---
+
 ## 🖥️ Tech Stack
 
 This project is built using a classic LAMP/WAMP/MAMP stack combined with modern frontend libraries.
@@ -47,7 +61,7 @@ This project is built using a classic LAMP/WAMP/MAMP stack combined with modern 
 |-------|-------------|-------------|
 | **Frontend** | HTML5, CSS3, Bootstrap 5, JavaScript (ES6) | Provides a responsive and modern user interface. |
 | **Backend** | PHP 8+, MySQL / MariaDB | The core server-side logic and database engine. |
-| **Data Tools** | DataTables, Dropify, Parsley.js | Used for dynamic tables, file uploads, and form validation. |
+| **Data Tools** | DataTables, Dropify, Parsley.js, **zxing-js/library (for QR)** | Used for dynamic tables, file uploads, form validation, and **QR code scanning**. |
 | **Export Tool** | SheetJS (XLSX.js) | Handles client-side exporting of table data to Excel files. |
 | **Icons** | Material Design Icons, Feather Icons | Consistent and clean iconography. |
 
@@ -73,9 +87,9 @@ C:\xampp\htdocs\diesel-monitoring
 
 ### 3️⃣ Import Database
 
-  * Open **phpMyAdmin**.
-  * Create a new database (e.g., `diesel_db`).
-  * Import the provided SQL file (`diesel_db.sql`) into the new database.
+  \* Open **phpMyAdmin**.
+  \* Create a new database (e.g., `diesel_db`).
+  \* Import the provided SQL file (`diesel_db.sql`) into the new database.
 
 ### 4️⃣ Configure Database Connection
 
@@ -106,23 +120,23 @@ http://localhost/diesel-monitoring
 ```
 diesel-monitoring/
 ├── assets/
-│   ├── css/          # Stylesheets
-│   ├── js/           # Custom JavaScript files
-│   ├── images/       # Project logos, dummy images
-│   └── vendor/       # Third-party libraries (Bootstrap, DataTables, etc.)
+│   ├── css/          # Stylesheets
+│   ├── js/           # Custom JavaScript files
+│   ├── images/       # Project logos, dummy images
+│   └── vendor/       # Third-party libraries (Bootstrap, DataTables, QR library, etc.)
 ├── includes/
-│   ├── config.php    # Database connection file
-│   ├── header.php    # Shared HTML header/navigation
-│   ├── footer.php    # Shared HTML footer/scripts
-├── pages/            # Core system pages
-│   ├── dashboard.php
-│   ├── purchase order.php
-│   ├── masterlist-and-report.php
-│   └── settings.php
-├── index.php         # Login page
-├── upload_logo.php   # Logo upload handler
+│   ├── config.php    # Database connection file
+│   ├── header.php    # Shared HTML header/navigation
+│   ├── footer.php    # Shared HTML footer/scripts
+├── pages/            # Core system pages
+│   ├── dashboard.php
+│   ├── purchase order.php
+│   ├── masterlist-and-report.php
+│   └── settings.php
+├── index.php         # Login page
+├── upload_logo.php   # Logo upload handler
 ├── update_password.php # Password update handler
-├── diesel_db.sql     # Database dump file
+├── diesel_db.sql     # Database dump file
 └── README.md
 ```
 
@@ -132,19 +146,21 @@ diesel-monitoring/
 
 The system is designed for a straightforward workflow:
 
-1.  **Login** using admin credentials (to be defined in the `diesel_db.sql`).
-2.  Add new diesel transaction records via the **Masterlist** section.
-3.  Monitor current and historical diesel usage and costs on the **Dashboard**.
-4.  Generate specific audit reports using the date and driver filters in the **Reports** section.
-5.  Update company logo and admin password under **Settings**.
+1.  **Login** using admin credentials (to be defined in the `diesel_db.sql`).
+2.  **Log a new transaction** by either:
+\* **Scanning a QR Code** (to pre-fill driver/vehicle data).
+\* Manually adding a new record via the **Masterlist** section.
+3.  Monitor current and historical diesel usage and costs on the **Dashboard**.
+4.  Generate specific audit reports using the date and driver filters in the **Reports** section.
+5.  Update company logo and admin password under **Settings**.
 
 -----
 
 ## 🧠 Developer Notes
 
-  * **Prerequisites:** Ensure you have **PHP 8+** and **MySQL/MariaDB** installed and running via XAMPP, Laragon, or a similar environment.
-  * **Browser Compatibility:** Use **Google Chrome** or **Edge** for the best rendering and performance.
-  * **Permissions:** Recommended: enable file upload permissions for the `uploads/` directory if you encounter issues saving the company logo.
+  \* **Prerequisites:** Ensure you have **PHP 8+** and **MySQL/MariaDB** installed and running via XAMPP, Laragon, or a similar environment.
+  \* **Browser Compatibility:** Use **Google Chrome** or **Edge** for the best rendering and performance. The QR scanner relies on modern browser APIs.
+  \* **Permissions:** Recommended: enable file upload permissions for the `uploads/` directory if you encounter issues saving the company logo.
 
 -----
 
@@ -156,4 +172,5 @@ The system is designed for a straightforward workflow:
 📧 [shimshimdiola@gmail.com](mailto:shimshimdiola@gmail.com)
 🌐 [https://github.com/shimshimdiola](https://github.com/shimshimdiola)
 
------
+```
+```
